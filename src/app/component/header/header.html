@@ -1,0 +1,126 @@
+<section class="top-header-purple">
+    <div class="container">
+        <div class="header-wrapper">
+
+            <!-- Left: Contact -->
+            <div class="left-section">
+                <a href="tel:+919876543210" class="links"><i class="fa-solid fa-phone"></i> +91 98765 43210</a>
+                <a href="mailto:info@rltacademy.com" class="links"><i class="fa-solid fa-envelope"></i> info@rltacademy.com</a>
+            </div>
+
+            <!-- Center: Announcement -->
+            <div class="center-section">
+                <p>🎓 Admissions Open 2026–27 | Excellence in Education Starts Here</p>
+            </div>
+
+            <!-- Right: Social + Button -->
+            <div class="right-section">
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <a routerLink="/admissions" class="enroll-btn">Enroll Now</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<nav class="navbar navbar-expand-lg main-header sticky-header">
+    <div class="container align-items-center">
+
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" routerLink="/">
+            <img src="Logo/RLT logo.png" class="logo-img">
+            <div class="logo-text">
+                <h5>RLT Academy Matriculation</h5>
+                <h5>Higher Secondary School</h5>
+            </div>
+        </a>
+
+        <!-- Toggle -->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+            <ul class="navbar-nav align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about" routerLinkActive="active">About Us</a>
+                </li>
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Academics
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <!-- Curriculum -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle">Curriculum</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" routerLink="/curriculum" routerLinkActive="active">Matriculation</a></li>
+                                <li><a class="dropdown-item" routerLink="/higher-secondary" routerLinkActive="active">Higher Secondary</a></li>
+                                <li><a class="dropdown-item" routerLink="/syllabus" routerLinkActive="active">Syllabus</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Student Life -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle">Student Life</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" routerLink="/activities" routerLinkActive="active">Activities</a></li>
+                                <li><a class="dropdown-item" routerLink="/sports" routerLinkActive="active">Sports</a></li>
+                                <li><a class="dropdown-item" routerLink="/clubs" routerLinkActive="active">Clubs</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Resources -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle">Resources</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" routerLink="/library" routerLinkActive="active">Library</a></li>
+                                <li><a class="dropdown-item" routerLink="/lab" routerLinkActive="active">Laboratories</a></li>
+                                <li><a class="dropdown-item" routerLink="/smart-classes" routerLinkActive="active">Smart Classes</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admissions" routerLinkActive="active">Admissions</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/facilities" routerLinkActive="active">Facilities</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/gallery" routerLinkActive="active">Gallery</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+                </li>
+
+                <!-- CTA -->
+                <li class="nav-item ms-lg-3">
+                    <a class="apply-btn" routerLink="/admissions">Apply Now</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>

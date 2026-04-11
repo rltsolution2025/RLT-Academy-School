@@ -1,0 +1,172 @@
+
+
+/* FOOTER */
+.footer {
+  background: #0b1d2a;
+  color: #fff;
+  padding: 60px 20px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ONLY ONE LIGHT SHAPE (no yellow circle) */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 280px;
+  height: 280px;
+  background: rgba(0, 119, 182, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+  display: none
+}
+
+/* Layout */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 55px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.logo-text h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.slogan {
+  font-size: 12px;
+  color: #ffd60a;
+}
+
+/* About */
+.about-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Headings */
+.footer-box h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ffd60a;
+}
+
+/* Links */
+.footer-box a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-box a:hover {
+  color: #ffd60a;
+  padding-left: 5px;
+}
+
+/* Contact */
+.footer-box p {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.footer-box i {
+  margin-right: 8px;
+  color: #ffd60a;
+}
+
+/* SOCIAL ICONS (FIXED PERFECT ALIGNMENT) */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.social {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.social i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+/* Brand Colors */
+.facebook { background: #1877f2; }
+.linkedin { background: #0077b5; }
+.instagram { background: #e1306c; }
+.youtube { background: #ff0000; }
+
+/* Hover */
+.social:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* Bottom */
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 13px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-bottom a {
+  color: #ccc;
+  margin-left: 15px;
+  text-decoration: none;
+  padding: 5px 8px;
+}
+
+.footer-bottom a:hover {
+  color: #ffd60a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
