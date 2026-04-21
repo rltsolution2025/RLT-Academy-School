@@ -1,1 +1,116 @@
-<p>admissions works!</p>
+<section class="admission-section py-5">
+
+    <div class="container">
+
+        <!-- HEADING -->
+        <div class="text-center mb-5">
+            <h2 class="admission-title">
+                Admissions Open <span>2026 – 2027</span>
+            </h2>
+            <p class="admission-subtitle">
+                Apply for RLT Academy Matriculation Higher Secondary School and give your child a strong academic
+                foundation.
+            </p>
+        </div>
+
+        <!-- FORM -->
+        <div class="admission-card">
+
+            <form #form="ngForm" (ngSubmit)="submitForm(form)">
+
+                <div class="row g-3">
+
+                    <!-- FLOATING INPUT -->
+                    <div class="col-md-6">
+                        <div class="floating-group">
+                            <input type="text" name="studentName" [(ngModel)]="formData.studentName" required
+                                placeholder=" ">
+                            <label>Student Name</label>
+                        </div>
+                    </div>
+
+                    <!-- CLASS -->
+                    <div class="col-md-6">
+                        <div class="floating-group">
+                            <select name="class" [(ngModel)]="formData.class" required>
+                                <option value="" disabled selected></option>
+                                <option *ngFor="let cls of classes">{{ cls }}</option>
+                            </select>
+                            <label>Applying Class</label>
+                        </div>
+                    </div>
+
+                    <!-- DOB -->
+                    <div class="col-md-6">
+                        <div class="floating-group">
+                            <input type="date" name="dob" [(ngModel)]="formData.dob" required placeholder=" ">
+                            <label>Date of Birth</label>
+                        </div>
+                    </div>
+
+                    <!-- GENDER -->
+                    <div class="col-md-6">
+                        <div class="floating-group">
+                            <select name="gender" [(ngModel)]="formData.gender" required>
+                                <option value="" disabled selected></option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                            <label>Gender</label>
+                        </div>
+                    </div>
+
+                    <!-- PARENT -->
+                    <div class="col-md-6">
+                        <div class="floating-group">
+                            <input type="text" name="parentName" [(ngModel)]="formData.parentName" required
+                                placeholder=" ">
+                            <label>Parent / Guardian Name</label>
+                        </div>
+                    </div>
+
+                    <!-- PHONE -->
+                    <div class="col-md-6">
+                        <div class="floating-group">
+                            <input type="tel" name="phone" [(ngModel)]="formData.phone" required placeholder=" ">
+                            <label>Phone Number</label>
+                        </div>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="col-md-6">
+                        <div class="floating-group">
+                            <input type="email" name="email" [(ngModel)]="formData.email" placeholder=" ">
+                            <label>Email</label>
+                        </div>
+                    </div>
+
+                    <!-- ADDRESS -->
+                    <div class="col-md-12">
+                        <div class="floating-group">
+                            <textarea name="address" [(ngModel)]="formData.address" placeholder=" "></textarea>
+                            <label>Address</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- SUBMIT -->
+                <div class="text-center mt-4">
+                    <button class="btn-submit" [disabled]="form.invalid">
+                        <i class="fas fa-paper-plane"></i> Submit Application
+                    </button>
+                </div>
+
+                <!-- SUCCESS -->
+                <div class="success-msg text-center mt-3" *ngIf="success">
+                    ✅ Application submitted successfully!
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
