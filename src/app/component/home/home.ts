@@ -3,7 +3,7 @@ import { Component, AfterViewInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-declare var AOS: any;
+import * as AOS from 'aos';
 declare var particlesJS: any;
 
 @Component({

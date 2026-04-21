@@ -1,6 +1,6 @@
 import { AfterViewInit, Component } from '@angular/core';
 
-declare var AOS: any;
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-facilities',
