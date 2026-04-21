@@ -1,89 +1,101 @@
 /* SECTION */
 .facilities-section,
 .play-ground-section {
-  background: #f8fafc;
-  padding: 80px 0;
+    background: #f8fafc;
+    padding: 80px 0;
 }
 
 /* TITLE */
 .facilities-title {
-  font-size: 40px;
-  font-weight: 900;
+    font-size: 40px;
+    font-weight: 900;
 }
 
 .facilities-title span {
-  color: #0077b6;
+    color: #0077b6;
 }
 
 /* CARD */
 .premium-card {
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  transition: 0.4s;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 /* IMAGE */
 .facility-img img,
 .play-img img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  transition: 0.5s;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.5s;
 }
 
 /* ZOOM */
 .premium-card:hover img {
-  transform: scale(1.12);
+    transform: scale(1.12);
 }
 
 /* OVERLAY */
 .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-  color: #fff;
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 15px;
-  transition: 0.4s;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px;
+    transition: 0.4s;
 }
 
 .premium-card:hover .overlay {
-  opacity: 1;
+    opacity: 1;
 }
 
 /* CONTENT */
 .facility-content,
 .play-content {
-  padding: 20px;
-  text-align: center;
+    padding: 20px;
+    text-align: center;
 }
 
 .facility-content i,
 .play-content i {
-  font-size: 28px;
-  color: #0077b6;
-  transition: 0.3s;
+    font-size: 28px;
+    color: #0077b6;
+    transition: 0.3s;
 }
 
 .premium-card:hover i {
-  transform: scale(1.2);
-  color: #00b4d8;
+    transform: scale(1.2);
+    color: #00b4d8;
 }
 
 /* HOVER */
 .premium-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
+
+/* HIDE FULL CONTENT WHEN CARD HOVER */
+.premium-card:hover .facility-content h3,
+.premium-card:hover .facility-content .hidden-text,
+.premium-card:hover .play-content h3 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+}
+
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .facilities-title {
-    font-size: 26px;
-  }
+    .facilities-title {
+        font-size: 26px;
+    }
 }
