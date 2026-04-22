@@ -1,1 +1,63 @@
-<p>galary works!</p>
+<section class="gallery-section">
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="gallery-title">Our <span>Campus Gallery</span></h2>
+      <p class="gallery-subtitle">
+        A glimpse into our vibrant campus life, events, sports, and national celebrations.
+      </p>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="filter-wrapper" data-aos="fade-up">
+      <button *ngFor="let f of filters"
+              (click)="setFilter(f.key)"
+              [class.active]="activeFilter === f.key">
+        {{f.label}}
+      </button>
+    </div>
+
+    <!-- GRID -->
+    <div class="row g-4 mt-4">
+
+      <div class="col-md-4"
+           *ngFor="let item of filteredItems"
+           (click)="openLightbox(item)"
+           data-aos="zoom-in">
+
+        <div class="gallery-card">
+
+          <img [src]="item.image" alt="gallery">
+
+          <div class="overlay">
+            <i class="fas"
+               [ngClass]="item.type==='video' ? 'fa-play' : 'fa-search'"></i>
+            <h5>{{item.title}}</h5>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" *ngIf="lightboxOpen" (click)="closeLightbox()">
+
+    <span class="close-btn">&times;</span>
+
+    <img *ngIf="selectedItem?.type==='photo'" [src]="selectedItem?.image">
+
+    <iframe *ngIf="selectedItem?.type==='video'"
+            [src]="selectedItem?.safeUrl"
+            frameborder="0"
+            allowfullscreen>
+    </iframe>
+
+  </div>
+
+</section>

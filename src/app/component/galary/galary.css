@@ -1,0 +1,142 @@
+/* ================= SECTION ================= */
+.gallery-section {
+    background: linear-gradient(135deg, #edf2fb, #e2eafc);
+    padding: 90px 0;
+    position: relative;
+}
+
+/* SOFT LIGHT GLOW */
+.gallery-section::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(0, 119, 255, 0.15);
+    filter: blur(120px);
+    top: -100px;
+    left: -100px;
+}
+
+/* ================= TITLE ================= */
+.gallery-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: #1b263b;
+}
+
+.gallery-title span {
+    color: #0077ff;
+}
+
+.gallery-subtitle {
+    color: #555;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* ================= FILTER ================= */
+.filter-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-wrapper button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: #fff;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.filter-wrapper button.active {
+    background: #0077ff;
+    color: #fff;
+}
+
+.filter-wrapper button:hover {
+    transform: translateY(-2px);
+}
+
+/* ================= CARD ================= */
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.gallery-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.overlay i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* HOVER EFFECT */
+.gallery-card:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-card:hover .overlay {
+    opacity: 1;
+}
+
+/* ================= LIGHTBOX ================= */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.lightbox img,
+.lightbox iframe {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .gallery-card img {
+        height: 200px;
+    }
+}
