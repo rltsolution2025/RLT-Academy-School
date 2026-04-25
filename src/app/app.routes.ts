@@ -42,7 +42,7 @@ export const routes: Routes = [
     { path: 'activities', component: Activities },
     { path: 'syllabus', component: Syllabus },
     { path: 'higher-secondary', component: HigherSecondary },
-    { path: 'curriculum', component: Matriculation },
+    { path: 'matriculation', component: Matriculation },
     { path: 'gallery', component: Galary },
     { path: 'facilities', component: Facilities },
     { path: 'terms', component: Terms },

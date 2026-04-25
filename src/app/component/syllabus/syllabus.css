@@ -1,0 +1,113 @@
+/* BACKGROUND */
+.matriculation-section {
+  padding: 90px 0;
+  background: linear-gradient(135deg, #f7faff, #eef4ff);
+}
+
+/* HERO */
+.hero-section {
+  margin-bottom: 60px;
+}
+
+.page-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.page-subtitle {
+  max-width: 700px;
+  margin: 10px auto;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* SECTION */
+.modern-section {
+  margin-top: 70px;
+}
+
+.section-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* CARD */
+.section-card {
+  padding: 40px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.alt-bg {
+  background: #f4f8ff;
+}
+
+/* TEXT */
+.content-block p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* LIST */
+.modern-list {
+  list-style: none;
+  padding: 0;
+}
+
+.modern-list li {
+  padding-left: 22px;
+  position: relative;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.modern-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0d6efd;
+}
+
+/* INFO CARD */
+.info-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+}
+
+.info-card h5 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* BOTTOM */
+.bottom-section {
+  margin-top: 90px;
+  text-align: center;
+  padding: 50px 20px;
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+.bottom-section p {
+  max-width: 750px;
+  margin: auto;
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .page-title {
+    font-size: 30px;
+  }
+
+  .section-card {
+    padding: 25px;
+  }
+
+}

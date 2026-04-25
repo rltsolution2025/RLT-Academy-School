@@ -1,1 +1,163 @@
-<p>contact-us works!</p>
+<section class="contact-section">
+
+    <div class="contact-container">
+
+        <!-- HEADER -->
+        <div class="contact-header text-center">
+            <h2>Let’s <span>Connect</span></h2>
+            <p>
+                Have questions about admissions, courses, or career opportunities?
+                Our team is here to guide you at every step of your academic journey.
+            </p>
+        </div>
+
+        <div class="row contact-layout">
+
+            <!-- LEFT INFO -->
+            <div class="col-lg-5">
+                <div class="info-card">
+
+                    <h3>Contact Information</h3>
+
+                    <p class="info-description">
+                        Reach out to us for course details, admissions support, or general inquiries.
+                    </p>
+
+                    <div class="info-block">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h6>Address</h6>
+                            <p>RLT Institute, Chennai, Tamil Nadu</p>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h6>Phone</h6>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h6>Email</h6>
+                            <p>info@rltinstitute.com</p>
+                        </div>
+                    </div>
+
+                    <div class="extra-info">
+                        <h5>Office Hours</h5>
+                        <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+
+                        <h5>Why Choose Us?</h5>
+                        <ul>
+                            <li>Experienced Faculty</li>
+                            <li>Practical Training</li>
+                            <li>Career Support</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="col-lg-7">
+                <div class="form-card">
+
+                    <h3>Send Us a Message</h3>
+                    <p class="form-subtext">
+                        Fill out the form and we will contact you soon.
+                    </p>
+
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+
+                        <div class="row">
+
+                            <!-- NAME -->
+                            <div class="col-md-6 input-group">
+                                <label>Your Name *</label>
+                                <input type="text" formControlName="name" placeholder="Enter your full name">
+
+                                <div class="error" *ngIf="(submitted || f['name'].touched) && f['name'].errors as err">
+                                    <small *ngIf="err['required']">Name is required</small>
+                                    <small *ngIf="err['minlength']">Minimum 3 characters</small>
+                                </div>
+                            </div>
+
+                            <!-- EMAIL -->
+                            <div class="col-md-6 input-group">
+                                <label>Email Address *</label>
+                                <input type="email" formControlName="email">
+
+                                <div class="error"
+                                    *ngIf="(submitted || f['email'].touched) && f['email'].errors as err">
+                                    <small *ngIf="err['required']">Email is required</small>
+                                    <small *ngIf="err['email']">Invalid email format</small>
+                                </div>
+                            </div>
+
+                            <!-- PHONE -->
+                            <div class="col-md-6 input-group">
+                                <label>Phone Number *</label>
+                                <input type="tel" formControlName="phone">
+
+                                <div class="error"
+                                    *ngIf="(submitted || f['phone'].touched) && f['phone'].errors as err">
+                                    <small *ngIf="err['required']">Phone number is required</small>
+                                    <small *ngIf="err['pattern']">Enter valid 10-digit number</small>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- GRADE -->
+                        <div class="input-group">
+                            <label>Grade *</label>
+                            <input type="text" formControlName="grade">
+
+                            <div class="error" *ngIf="(submitted || f['grade'].touched) && f['grade'].errors as err">
+                                <small *ngIf="err['required']">Grade is required</small>
+                                <small *ngIf="err['pattern']">Enter valid grade (e.g., Grade 10)</small>
+                            </div>
+                        </div>
+
+                        <!-- MESSAGE -->
+                        <div class="input-group">
+                            <label>Message *</label>
+                            <textarea rows="4" formControlName="message"></textarea>
+
+                            <div class="error"
+                                *ngIf="(submitted || f['message'].touched) && f['message'].errors as err">
+                                <small *ngIf="err['required']">Message is required</small>
+                                <small *ngIf="err['minlength']">Minimum 10 characters</small>
+                            </div>
+                        </div>
+
+                        <!-- BUTTON -->
+                        <button class="btn-send" [disabled]="loading">
+                            <span *ngIf="!loading">Send Message</span>
+                            <span *ngIf="loading">Sending...</span>
+                        </button>
+
+                        <!-- SUCCESS -->
+                        <p class="success-msg" *ngIf="successMessage">
+                            Thank you! Your message has been submitted successfully.
+                        </p>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MAP -->
+    <div class="map-box">
+        <iframe src="https://maps.google.com/maps?q=Chennai&z=13&output=embed"></iframe>
+    </div>
+
+</section>
