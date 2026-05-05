@@ -35,7 +35,7 @@ export const routes: Routes = [
     { path: 'results', component: Results },
     { path: 'admissions', component: Admissions },
     { path: 'smart-classes', component: SmartClasses },
-    { path: 'lab', component: Laborartories },
+    { path: 'labs', component: Laborartories },
     { path: 'library', component: Library },
     { path: 'clubs', component: Club },
     { path: 'sports', component: Sports },

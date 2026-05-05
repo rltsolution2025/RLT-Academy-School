@@ -1,0 +1,193 @@
+/* ================= HEADER ================= */
+.events-header {
+  position: relative;
+  padding: 120px 20px 100px;
+  overflow: hidden;
+
+  /* NEW gradient colors */
+  background: linear-gradient(135deg, #071f4b, #082455, #13446e, #063947);
+}
+
+/* ================= GLASS CARD ================= */
+.header-glass-card {
+  max-width: 800px;
+  margin: auto;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  border-radius: 25px;
+  padding: 50px 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= BADGE ================= */
+.header-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+/* ================= TITLE ================= */
+.events-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+
+  /* multicolor white shimmer */
+  background: linear-gradient(90deg, #ffffff, #dbeafe, #ffffff, #e0f2fe);
+  background-size: 300% 100%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: textFlow 6s linear infinite;
+}
+
+/* ================= SUBTITLE ================= */
+.events-subtitle {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+
+  max-width: 650px;
+  margin: auto;
+}
+
+/* ================= TEXT FLOW ================= */
+@keyframes textFlow {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+/* ================= DECORATIVE BLOBS ================= */
+.events-header::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  top: -120px;
+  left: -120px;
+  filter: blur(70px);
+}
+
+.events-header::after {
+  content: '';
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.08);
+  bottom: -100px;
+  right: -100px;
+  filter: blur(70px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .events-title {
+    font-size: 30px;
+  }
+
+  .events-subtitle {
+    font-size: 14px;
+  }
+
+  .header-glass-card {
+    padding: 30px 20px;
+  }
+
+  .events-header {
+    padding: 80px 15px;
+  }
+}
+
+.sports-section {
+  background: linear-gradient(135deg, #f7faff, #eef4ff);
+  padding: 60px 0;
+}
+
+/* HEADING */
+
+.section-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0d6efd;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+
+.section-text {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+/* LIST */
+
+.sports-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.sports-list li {
+  padding-left: 22px;
+  position: relative;
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 14px;
+}
+
+.sports-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #0d6efd;
+}
+
+/* IMAGE WRAPPER */
+
+.image-wrapper {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.image-wrapper img {
+  border-radius: 12px;
+  width: 100%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 26px;
+    text-align: center;
+  }
+  .section-text {
+    text-align: center;
+  }
+  .sports-list {
+    text-align: left;
+  }
+}
