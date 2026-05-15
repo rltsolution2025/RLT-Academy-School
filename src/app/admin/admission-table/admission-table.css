@@ -1,0 +1,233 @@
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.table-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-bottom: 24px;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.table-header h2 {
+  margin: 0;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+/* =========================================
+   EXPORT BUTTON
+========================================= */
+
+.btn-export {
+  border: none;
+
+  background: #16a34a;
+
+  color: #ffffff;
+
+  padding: 11px 20px;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.btn-export:hover {
+  background: #15803d;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table {
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  min-width: 1300px;
+}
+
+/* TABLE HEAD */
+
+.table thead {
+  background: #0f172a;
+
+  color: #ffffff;
+}
+
+.table th {
+  padding: 16px 14px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+/* TABLE BODY */
+
+.table td {
+  padding: 14px;
+
+  font-size: 14px;
+
+  vertical-align: middle;
+}
+
+/* HOVER */
+
+.table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* =========================================
+   STUDENT NAME
+========================================= */
+
+.student-name {
+  font-weight: 600;
+
+  color: #0f172a;
+}
+
+/* =========================================
+   CLASS BADGE
+========================================= */
+
+.badge-class {
+  background: #dbeafe;
+
+  color: #1d4ed8;
+
+  padding: 6px 12px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   GENDER BADGE
+========================================= */
+
+.badge-gender {
+  padding: 6px 12px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.male {
+  background: #dbeafe;
+
+  color: #1d4ed8;
+}
+
+.female {
+  background: #fce7f3;
+
+  color: #be185d;
+}
+
+/* =========================================
+   ADDRESS
+========================================= */
+
+.address-cell {
+  min-width: 240px;
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.loading-box {
+  background: #ffffff;
+
+  padding: 40px;
+
+  border-radius: 14px;
+
+  text-align: center;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.empty-box {
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  padding: 60px 20px;
+
+  text-align: center;
+}
+
+.empty-box i {
+  font-size: 60px;
+
+  color: #94a3b8;
+
+  margin-bottom: 16px;
+}
+
+.empty-box p {
+  color: #64748b;
+
+  font-size: 16px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .table-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .table-header h2 {
+    font-size: 22px;
+  }
+
+  .btn-export {
+    width: 100%;
+  }
+}

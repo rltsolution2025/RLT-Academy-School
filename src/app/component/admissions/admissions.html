@@ -1,116 +1,218 @@
 <section class="admission-section py-5">
+  <div class="container">
+    <!-- HEADING -->
 
-    <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="admission-title">Admissions Open <span>2026 – 2027</span></h2>
 
-        <!-- HEADING -->
-        <div class="text-center mb-5">
-            <h2 class="admission-title">
-                Admissions Open <span>2026 – 2027</span>
-            </h2>
-            <p class="admission-subtitle">
-                Apply for RLT Academy Matriculation Higher Secondary School and give your child a strong academic
-                foundation.
-            </p>
-        </div>
-
-        <!-- FORM -->
-        <div class="admission-card">
-
-            <form #form="ngForm" (ngSubmit)="submitForm(form)">
-
-                <div class="row g-3">
-
-                    <!-- FLOATING INPUT -->
-                    <div class="col-md-6">
-                        <div class="floating-group">
-                            <input type="text" name="studentName" [(ngModel)]="formData.studentName" required
-                                placeholder=" ">
-                            <label>Student Name</label>
-                        </div>
-                    </div>
-
-                    <!-- CLASS -->
-                    <div class="col-md-6">
-                        <div class="floating-group">
-                            <select name="class" [(ngModel)]="formData.class" required>
-                                <option value="" disabled selected></option>
-                                <option *ngFor="let cls of classes">{{ cls }}</option>
-                            </select>
-                            <label>Applying Class</label>
-                        </div>
-                    </div>
-
-                    <!-- DOB -->
-                    <div class="col-md-6">
-                        <div class="floating-group">
-                            <input type="date" name="dob" [(ngModel)]="formData.dob" required placeholder=" ">
-                            <label>Date of Birth</label>
-                        </div>
-                    </div>
-
-                    <!-- GENDER -->
-                    <div class="col-md-6">
-                        <div class="floating-group">
-                            <select name="gender" [(ngModel)]="formData.gender" required>
-                                <option value="" disabled selected></option>
-                                <option>Male</option>
-                                <option>Female</option>
-                            </select>
-                            <label>Gender</label>
-                        </div>
-                    </div>
-
-                    <!-- PARENT -->
-                    <div class="col-md-6">
-                        <div class="floating-group">
-                            <input type="text" name="parentName" [(ngModel)]="formData.parentName" required
-                                placeholder=" ">
-                            <label>Parent / Guardian Name</label>
-                        </div>
-                    </div>
-
-                    <!-- PHONE -->
-                    <div class="col-md-6">
-                        <div class="floating-group">
-                            <input type="tel" name="phone" [(ngModel)]="formData.phone" required placeholder=" ">
-                            <label>Phone Number</label>
-                        </div>
-                    </div>
-
-                    <!-- EMAIL -->
-                    <div class="col-md-6">
-                        <div class="floating-group">
-                            <input type="email" name="email" [(ngModel)]="formData.email" placeholder=" ">
-                            <label>Email</label>
-                        </div>
-                    </div>
-
-                    <!-- ADDRESS -->
-                    <div class="col-md-12">
-                        <div class="floating-group">
-                            <textarea name="address" [(ngModel)]="formData.address" placeholder=" "></textarea>
-                            <label>Address</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- SUBMIT -->
-                <div class="text-center mt-4">
-                    <button class="btn-submit" [disabled]="form.invalid">
-                        <i class="fas fa-paper-plane"></i> Submit Application
-                    </button>
-                </div>
-
-                <!-- SUCCESS -->
-                <div class="success-msg text-center mt-3" *ngIf="success">
-                    ✅ Application submitted successfully!
-                </div>
-
-            </form>
-
-        </div>
-
+      <p class="admission-subtitle">
+        Apply for RLT Academy Matriculation Higher Secondary School and give your child a strong
+        academic foundation.
+      </p>
     </div>
 
+    <!-- CARD -->
+
+    <div class="admission-card">
+      <form #form="ngForm" (ngSubmit)="submitForm(form)" novalidate>
+        <div class="row g-3">
+          <!-- STUDENT NAME -->
+
+          <div class="col-md-6">
+            <div class="floating-group">
+              <input
+                type="text"
+                name="studentName"
+                [(ngModel)]="formData.studentName"
+                #studentName="ngModel"
+                required
+                minlength="3"
+                placeholder=" "
+              />
+
+              <label>Student Name</label>
+
+              <small class="error-text" *ngIf="studentName.invalid && studentName.touched">
+                Enter valid student name
+              </small>
+            </div>
+          </div>
+
+          <!-- CLASS -->
+
+          <div class="col-md-6">
+            <div class="floating-group">
+              <select name="class" [(ngModel)]="formData.class" #studentClass="ngModel" required>
+                <option value="" disabled selected></option>
+
+                <option *ngFor="let cls of classes">
+                  {{ cls }}
+                </option>
+              </select>
+
+              <label>Applying Class</label>
+
+              <small class="error-text" *ngIf="studentClass.invalid && studentClass.touched">
+                Select class
+              </small>
+            </div>
+          </div>
+
+          <!-- DOB -->
+
+          <div class="col-md-6">
+            <div class="floating-group">
+              <input
+                type="date"
+                name="dob"
+                [(ngModel)]="formData.dob"
+                #dob="ngModel"
+                required
+                placeholder=" "
+              />
+
+              <label>Date of Birth</label>
+
+              <small class="error-text" *ngIf="dob.invalid && dob.touched">
+                Select date of birth
+              </small>
+            </div>
+          </div>
+
+          <!-- GENDER -->
+
+          <div class="col-md-6">
+            <div class="floating-group">
+              <select name="gender" [(ngModel)]="formData.gender" #gender="ngModel" required>
+                <option value="" disabled selected></option>
+
+                <option>Male</option>
+
+                <option>Female</option>
+              </select>
+
+              <label>Gender</label>
+
+              <small class="error-text" *ngIf="gender.invalid && gender.touched">
+                Select gender
+              </small>
+            </div>
+          </div>
+
+          <!-- PARENT NAME -->
+
+          <div class="col-md-6">
+            <div class="floating-group">
+              <input
+                type="text"
+                name="parentName"
+                [(ngModel)]="formData.parentName"
+                #parentName="ngModel"
+                required
+                minlength="3"
+                placeholder=" "
+              />
+
+              <label>Parent / Guardian Name</label>
+
+              <small class="error-text" *ngIf="parentName.invalid && parentName.touched">
+                Enter parent name
+              </small>
+            </div>
+          </div>
+
+          <!-- PHONE -->
+
+          <div class="col-md-6">
+            <div class="floating-group">
+              <input
+                type="tel"
+                name="phone"
+                [(ngModel)]="formData.phone"
+                #phone="ngModel"
+                required
+                pattern="^[0-9]{10}$"
+                placeholder=" "
+              />
+
+              <label>Phone Number</label>
+
+              <small class="error-text" *ngIf="phone.invalid && phone.touched">
+                Enter valid 10-digit phone number
+              </small>
+            </div>
+          </div>
+
+          <!-- EMAIL -->
+
+          <div class="col-md-6">
+            <div class="floating-group">
+              <input
+                type="email"
+                name="email"
+                [(ngModel)]="formData.email"
+                #email="ngModel"
+                email
+                placeholder=" "
+              />
+
+              <label>Email</label>
+
+              <small class="error-text" *ngIf="email.invalid && email.touched">
+                Enter valid email
+              </small>
+            </div>
+          </div>
+
+          <!-- ADDRESS -->
+
+          <div class="col-md-12">
+            <div class="floating-group">
+              <textarea
+                name="address"
+                [(ngModel)]="formData.address"
+                #address="ngModel"
+                minlength="10"
+                placeholder=" "
+              ></textarea>
+
+              <label>Address</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- BUTTON -->
+
+        <div class="text-center mt-4">
+          <button class="btn-submit" [disabled]="loading || form.invalid">
+            <span *ngIf="!loading">
+              <i class="fas fa-paper-plane"></i>
+              Submit Application
+            </span>
+
+            <span *ngIf="loading"> Submitting... </span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SUCCESS POPUP -->
+
+  <div class="popup-overlay" *ngIf="showPopup">
+    <div class="success-popup">
+      <div class="popup-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+
+      <h3>Thank You {{ submittedName }}!</h3>
+
+      <p>
+        Your admission application has been submitted successfully. Our team will contact you
+        shortly.
+      </p>
+
+      <button type="button" class="popup-btn" (click)="closePopup()">OK</button>
+    </div>
+  </div>
 </section>

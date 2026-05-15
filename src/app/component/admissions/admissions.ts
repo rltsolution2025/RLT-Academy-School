@@ -1,15 +1,26 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
+
+import { AdmissionApi } from '../../service/admission/admission.api';
 
 @Component({
   selector: 'app-admissions',
+  standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './admissions.html',
   styleUrl: './admissions.css',
 })
 export class Admissions {
+  constructor(private admissionApi: AdmissionApi) {}
+
   success = false;
+
+  loading = false;
+
+  showPopup = false;
+
+  submittedName = '';
 
   classes: string[] = [
     'Pre-KG',
@@ -28,37 +39,54 @@ export class Admissions {
     email: '',
     address: '',
   };
-  submitForm(form: any) {
 
+  submitForm(form: NgForm) {
     this.success = false;
 
-    if (form.invalid) return;
+    if (form.invalid) {
+      form.control.markAllAsTouched();
+      return;
+    }
 
-    // ✅ CREATE COPY (VERY IMPORTANT)
+    this.loading = true;
+
     const data = { ...this.formData };
 
-    console.log("Form Data:", data);
+    this.admissionApi.submitAdmission(data).subscribe({
+      next: (response) => {
+        this.loading = false;
 
-    // ✅ SHOW SUCCESS
-    this.success = true;
+        this.submittedName = data.studentName;
 
-    // ✅ RESET FORM PROPERLY
-    form.resetForm();
+        this.showPopup = true;
 
-    // ✅ RESET OBJECT MANUALLY (BEST PRACTICE)
-    this.formData = {
-      studentName: '',
-      class: '',
-      dob: '',
-      gender: '',
-      parentName: '',
-      phone: '',
-      email: '',
-      address: '',
-    };
+        form.resetForm();
 
-    setTimeout(() => {
-      this.success = false;
-    }, 3000);
+        this.formData = {
+          studentName: '',
+          class: '',
+          dob: '',
+          gender: '',
+          parentName: '',
+          phone: '',
+          email: '',
+          address: '',
+        };
+
+        setTimeout(() => {
+          this.showPopup = false;
+        }, 4000);
+      },
+
+      error: (error) => {
+        console.error('Admission Error:', error);
+
+        this.loading = false;
+      },
+    });
+  }
+
+  closePopup() {
+    this.showPopup = false;
   }
 }

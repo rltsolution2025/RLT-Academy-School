@@ -1,0 +1,37 @@
+<div class="dashboard-layout">
+  <!-- SIDEBAR -->
+
+  <div class="sidebar">
+    <h2 class="logo">Admin Panel</h2>
+
+    <ul>
+      <li [class.active]="selectedMenu === 'contacts'" (click)="selectedMenu = 'contacts'">
+        Contacts
+      </li>
+
+      <li [class.active]="selectedMenu === 'admissions'" (click)="selectedMenu = 'admissions'">
+        Admissions
+      </li>
+    </ul>
+  </div>
+
+  <!-- MAIN -->
+
+  <div class="main-content">
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+      <h3>Welcome, {{ adminName }}</h3>
+
+      <button (click)="logout()">Logout</button>
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="content-area">
+      <app-contact-table *ngIf="selectedMenu === 'contacts'"></app-contact-table>
+
+      <app-admission-table *ngIf="selectedMenu === 'admissions'"></app-admission-table>
+    </div>
+  </div>
+</div>
