@@ -442,4 +442,45 @@
   .offcanvas {
     display: none;
   }
+
+  /* ========================================================= MOBILE LOGIN BUTTON ========================================================= */
+  .mobile-login-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #0d6efd, #2563eb);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+  } /* ICON */
+  .mobile-login-btn i {
+    font-size: 16px;
+  } /* HOVER */
+  .mobile-login-btn:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.3);
+  } /* ACTIVE TOUCH */
+  .mobile-login-btn:active {
+    transform: scale(0.98);
+  } /* MOBILE OPTIMIZATION */
+  @media (max-width: 575px) {
+    .mobile-login-btn {
+      padding: 15px;
+      font-size: 14px;
+      border-radius: 12px;
+    }
+  } /* TOUCH DEVICES */
+  @media (hover: none) {
+    .mobile-login-btn:hover {
+      transform: none;
+    }
+  }
 }
