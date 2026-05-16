@@ -1,63 +1,355 @@
-.login-section {
+/* ======================================================
+   LOGIN PAGE
+====================================================== */
+
+.login-page {
   min-height: 100vh;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 
-  background: linear-gradient(135deg, #d3d4d6, #eff5ff, #d3d4d6);
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+
+  padding: 20px;
+
+  position: relative;
+
+  overflow: hidden;
 }
 
+/* ======================================================
+   BACKGROUND SHAPES
+====================================================== */
+
+.login-page::before {
+  content: '';
+
+  position: absolute;
+
+  width: 380px;
+
+  height: 380px;
+
+  background: rgba(37, 99, 235, 0.08);
+
+  border-radius: 50%;
+
+  top: -120px;
+
+  right: -120px;
+}
+
+.login-page::after {
+  content: '';
+
+  position: absolute;
+
+  width: 300px;
+
+  height: 300px;
+
+  background: rgba(59, 130, 246, 0.08);
+
+  border-radius: 50%;
+
+  bottom: -100px;
+
+  left: -100px;
+}
+
+/* ======================================================
+   LOGIN CARD
+====================================================== */
+
 .login-card {
+  position: relative;
+
+  z-index: 2;
+
   width: 100%;
-  max-width: 400px;
+
+  max-width: 430px;
 
   background: #ffffff;
 
   padding: 40px;
 
-  border-radius: 18px;
+  border-radius: 24px;
 
-  box-shadow: 10px 40px 35px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+
+  animation: fadeUp 0.5s ease;
 }
 
-.login-card h2 {
+/* ======================================================
+   HEADER
+====================================================== */
+
+.login-header {
   text-align: center;
-  margin-bottom: 30px;
+
+  margin-bottom: 32px;
 }
+
+.login-header h2 {
+  margin: 0;
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  color: #0f172a;
+}
+
+.login-header p {
+  margin-top: 10px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  letter-spacing: 0.3px;
+}
+
+/* ======================================================
+   FORM GROUP
+====================================================== */
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
-.form-group input {
+/* LABEL */
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #334155;
+}
+
+/* ======================================================
+   INPUT
+====================================================== */
+
+.form-control {
   width: 100%;
 
-  padding: 14px;
+  padding: 14px 16px;
 
-  border-radius: 10px;
+  border-radius: 14px;
 
-  border: 1px solid #ddd;
+  border: 1px solid #cbd5e1;
+
+  background: #f8fafc;
+
+  outline: none;
+
+  font-size: 14px;
+
+  color: #0f172a;
+
+  transition: all 0.3s ease;
 }
 
-button {
+/* PLACEHOLDER */
+
+.form-control::placeholder {
+  color: #94a3b8;
+}
+
+/* HOVER */
+
+.form-control:hover {
+  border-color: #93c5fd;
+}
+
+/* FOCUS */
+
+.form-control:focus {
+  border-color: #2563eb;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* INVALID */
+
+.form-control.ng-invalid.ng-touched {
+  border-color: #dc2626;
+
+  background: #fef2f2;
+}
+
+/* ======================================================
+   ERROR TEXT
+====================================================== */
+
+.error-text {
+  display: block;
+
+  margin-top: 6px;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  color: #dc2626;
+}
+
+/* ======================================================
+   CUSTOM ALERT
+====================================================== */
+
+.custom-alert {
+  margin-top: 14px;
+
+  padding: 14px 16px;
+
+  border-radius: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  animation: fadeIn 0.3s ease;
+}
+
+/* ERROR ALERT */
+
+.error-alert {
+  background: #fee2e2;
+
+  color: #b91c1c;
+
+  border: 1px solid #fecaca;
+}
+
+/* SUCCESS ALERT */
+
+.success-alert {
+  background: #dcfce7;
+
+  color: #166534;
+
+  border: 1px solid #bbf7d0;
+}
+
+/* ALERT ICON */
+
+.custom-alert i {
+  font-size: 16px;
+}
+
+/* ======================================================
+   LOGIN BUTTON
+====================================================== */
+
+.btn-login {
   width: 100%;
 
   border: none;
 
   padding: 14px;
 
-  border-radius: 10px;
+  margin-top: 12px;
 
-  background: #2563eb;
+  border-radius: 14px;
 
-  color: #fff;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  color: #ffffff;
+
+  font-size: 15px;
 
   font-weight: 600;
+
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
 }
 
-.error {
-  color: red;
-  margin-top: 15px;
-  text-align: center;
+/* BUTTON HOVER */
+
+.btn-login:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.28);
+}
+
+/* BUTTON ACTIVE */
+
+.btn-login:active {
+  transform: scale(0.98);
+}
+
+/* BUTTON DISABLED */
+
+.btn-login:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+/* ======================================================
+   ANIMATIONS
+====================================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 576px) {
+  .login-card {
+    padding: 30px 24px;
+  }
+
+  .login-header h2 {
+    font-size: 28px;
+  }
+
+  .btn-login {
+    font-size: 14px;
+  }
 }

@@ -1,0 +1,172 @@
+/* ================= MOBILE TOGGLE ================= */
+
+.mobile-toggle {
+  border: none;
+  font-size: 24px;
+  color: #212d69;
+}
+
+.mobile-toggle:focus {
+  box-shadow: none;
+}
+
+/* ================= OFFCANVAS ================= */
+
+.offcanvas {
+  width: 300px;
+}
+
+/* ================= MOBILE MENU ================= */
+
+.mobile-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu li {
+  border-bottom: 1px solid #eee;
+}
+
+/* LINKS */
+
+.mobile-menu a {
+  display: block;
+  padding: 14px 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mobile-menu a.active {
+  color: #4b2cff;
+}
+
+/* DROPDOWN BUTTON */
+
+.mobile-dropdown-btn {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 14px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+/* SUBMENU */
+
+.mobile-submenu {
+  list-style: none;
+  padding-left: 15px;
+  background: #f8f9ff;
+}
+
+.mobile-submenu a {
+  font-size: 14px;
+  padding: 12px 10px;
+}
+
+/* LOGIN BUTTON */
+
+.mobile-login-btn {
+  display: block;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #4b2cff, #6a5cff);
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ================= DESKTOP ================= */
+
+@media (min-width: 992px) {
+  .mobile-toggle {
+    display: none;
+  }
+
+  .offcanvas {
+    display: none;
+  }
+}
+
+/* =========================================================
+   MOBILE LOGIN BUTTON
+========================================================= */
+
+.mobile-login-wrapper {
+  margin-top: 24px;
+}
+
+.mobile-login-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 18px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #0d6efd, #2563eb);
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+/* ICON */
+
+.mobile-login-btn i {
+  font-size: 16px;
+}
+
+/* HOVER */
+
+.mobile-login-btn:hover {
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.3);
+}
+
+/* ACTIVE TOUCH */
+
+.mobile-login-btn:active {
+  transform: scale(0.98);
+}
+
+/* MOBILE OPTIMIZATION */
+
+@media (max-width: 575px) {
+  .mobile-login-btn {
+    padding: 15px;
+
+    font-size: 14px;
+
+    border-radius: 12px;
+    color: #ffffff;
+  }
+}
+
+/* TOUCH DEVICES */
+
+@media (hover: none) {
+  .mobile-login-btn:hover {
+    transform: none;
+  }
+}

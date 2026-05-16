@@ -83,7 +83,11 @@
               <!-- EMAIL -->
               <div class="col-md-6 input-group">
                 <label>Email Address *</label>
-                <input type="email" formControlName="email" />
+                <input
+                  type="email"
+                  formControlName="email"
+                  placeholder="Enter Your Email Address"
+                />
 
                 <div
                   class="error"
@@ -97,7 +101,7 @@
               <!-- PHONE -->
               <div class="col-md-6 input-group">
                 <label>Phone Number *</label>
-                <input type="tel" formControlName="phone" />
+                <input type="tel" formControlName="phone" placeholder="Enter Your Phone Number" />
 
                 <div
                   class="error"
@@ -112,7 +116,11 @@
             <!-- GRADE -->
             <div class="input-group">
               <label>Grade *</label>
-              <input type="text" formControlName="grade" />
+              <input
+                type="text"
+                formControlName="grade"
+                placeholder="Enter Your Grade (e.g., Grade 10)"
+              />
 
               <div
                 class="error"
@@ -123,16 +131,20 @@
               </div>
             </div>
 
-            <!-- MESSAGE -->
+            <!-- ADDRESS -->
             <div class="input-group">
-              <label>Message *</label>
-              <textarea rows="4" formControlName="message"></textarea>
+              <label>Address *</label>
+              <textarea
+                rows="4"
+                formControlName="message"
+                placeholder="Enter Your Address"
+              ></textarea>
 
               <div
                 class="error"
                 *ngIf="(submitted || f['message'].touched) && f['message'].errors as err"
               >
-                <small *ngIf="err['required']">Message is required</small>
+                <small *ngIf="err['required']">Address is required</small>
                 <small *ngIf="err['minlength']">Minimum 10 characters</small>
               </div>
             </div>

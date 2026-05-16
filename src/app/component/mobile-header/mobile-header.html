@@ -1,0 +1,99 @@
+<!-- MOBILE OFFCANVAS -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+  <!-- HEADER -->
+  <div class="offcanvas-header">
+    <div class="d-flex align-items-center gap-2">
+      <img src="Logo/RLT logo.png" width="45" />
+
+      <div>
+        <h6 class="mb-0 fw-bold">RLT Academy</h6>
+        <small>Higher Secondary School</small>
+      </div>
+    </div>
+
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <!-- BODY -->
+  <div class="offcanvas-body">
+    <ul class="mobile-menu">
+      <!-- HOME -->
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          data-bs-dismiss="offcanvas"
+        >
+          Home
+        </a>
+      </li>
+
+      <!-- ABOUT -->
+      <li>
+        <a routerLink="/about" routerLinkActive="active" data-bs-dismiss="offcanvas"> About Us </a>
+      </li>
+
+      <!-- ACADEMICS -->
+      <li>
+        <button
+          class="mobile-dropdown-btn"
+          data-bs-toggle="collapse"
+          data-bs-target="#academicsMobile"
+        >
+          Academics
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="collapse" id="academicsMobile">
+          <ul class="mobile-submenu">
+            <li>
+              <a routerLink="/matriculation" data-bs-dismiss="offcanvas"> Matriculation </a>
+            </li>
+
+            <li>
+              <a routerLink="/higher-secondary" data-bs-dismiss="offcanvas"> Higher Secondary </a>
+            </li>
+
+            <li>
+              <a routerLink="/syllabus" data-bs-dismiss="offcanvas"> Syllabus </a>
+            </li>
+
+            <li>
+              <a routerLink="/activities" data-bs-dismiss="offcanvas"> Activities </a>
+            </li>
+
+            <li>
+              <a routerLink="/sports" data-bs-dismiss="offcanvas"> Sports </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- ADMISSIONS -->
+      <li>
+        <a routerLink="/admissions" data-bs-dismiss="offcanvas"> Admissions </a>
+      </li>
+
+      <!-- FACILITIES -->
+      <li>
+        <a routerLink="/facilities" data-bs-dismiss="offcanvas"> Facilities </a>
+      </li>
+
+      <!-- GALLERY -->
+      <li>
+        <a routerLink="/gallery" data-bs-dismiss="offcanvas"> Gallery </a>
+      </li>
+
+      <!-- CONTACT -->
+      <li>
+        <a routerLink="/contact" data-bs-dismiss="offcanvas"> Contact </a>
+      </li>
+    </ul>
+
+    <!-- LOGIN BUTTON -->
+    <a href="https://rltfuturex.thinkific.com/users/sign_in" class="mobile-login-btn">
+      Student / Teacher Login
+    </a>
+  </div>
+</div>

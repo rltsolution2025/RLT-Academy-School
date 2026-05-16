@@ -21,6 +21,7 @@ import { Matriculation } from './component/matriculation/matriculation';
 import { Galary } from './component/galary/galary';
 import { Facilities } from './component/facilities/facilities';
 import { Terms } from './component/terms/terms';
+import { adminGuard } from './guards/admin-guard';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -48,11 +49,15 @@ export const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },
   {
     path: 'admin/login',
+
     loadComponent: () => import('./admin/admin-login/admin-login').then((m) => m.AdminLogin),
   },
 
   {
     path: 'admin/dashboard',
+
+    canActivate: [adminGuard],
+
     loadComponent: () =>
       import('./admin/admin-dashboard/admin-dashboard').then((m) => m.AdminDashboard),
   },

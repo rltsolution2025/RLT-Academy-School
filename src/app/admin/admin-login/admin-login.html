@@ -1,33 +1,85 @@
-<section class="login-section">
+<div class="login-page">
   <div class="login-card">
-    <h2>Admin Login</h2>
+    <!-- HEADER -->
+
+    <div class="login-header">
+      <h2>Admin Login</h2>
+
+      <p>RLT Academy Admin Panel</p>
+    </div>
+
+    <!-- FORM -->
 
     <form #form="ngForm" (ngSubmit)="login(form)">
+      <!-- USERNAME -->
+
       <div class="form-group">
+        <label> Username </label>
+
         <input
           type="text"
           name="username"
+          class="form-control"
+          placeholder="Enter Username"
           [(ngModel)]="formData.username"
+          (input)="clearMessages()"
+          #username="ngModel"
           required
-          placeholder="Username"
         />
+
+        <!-- REQUIRED ERROR -->
+
+        <small class="error-text" *ngIf="username.errors?.['required'] && username.touched">
+          Username is required
+        </small>
       </div>
 
+      <!-- PASSWORD -->
+
       <div class="form-group">
+        <label> Password </label>
+
         <input
           type="password"
           name="password"
+          class="form-control"
+          placeholder="Enter Password"
           [(ngModel)]="formData.password"
+          (input)="clearMessages()"
+          #password="ngModel"
           required
-          placeholder="Password"
         />
+
+        <!-- REQUIRED ERROR -->
+
+        <small class="error-text" *ngIf="password.errors?.['required'] && password.touched">
+          Password is required
+        </small>
       </div>
 
-      <button type="submit">Login</button>
+      <!-- ERROR ALERT -->
 
-      <p class="error" *ngIf="errorMessage">
+      <div class="custom-alert error-alert" *ngIf="errorMessage">
+        <i class="fas fa-circle-exclamation"></i>
+
         {{ errorMessage }}
-      </p>
+      </div>
+
+      <!-- SUCCESS ALERT -->
+
+      <div class="custom-alert success-alert" *ngIf="successMessage">
+        <i class="fas fa-circle-check"></i>
+
+        {{ successMessage }}
+      </div>
+
+      <!-- BUTTON -->
+
+      <button type="submit" class="btn-login" [disabled]="loading">
+        <span *ngIf="!loading"> Login </span>
+
+        <span *ngIf="loading"> Please wait... </span>
+      </button>
     </form>
   </div>
-</section>
+</div>

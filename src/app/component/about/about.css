@@ -619,3 +619,254 @@
     font-size: 48px;
   }
 }
+/* ========================================================= GLOBAL RESPONSIVE FIXES ========================================================= */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+} /* ========================================================= MOBILE FIRST DESIGN ========================================================= */
+@media (max-width: 575px) {
+  /* GLOBAL */
+  section {
+    padding: 55px 15px !important;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  } /* ===================================================== HERO SECTION ===================================================== */
+  .admission-ultra {
+    height: auto;
+    min-height: 85vh;
+    background-position: center;
+    background-attachment: scroll;
+    padding: 100px 0;
+  }
+  .admission-content {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .admission-content h2 {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+  .admission-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+  } /* BUTTONS */
+  .admission-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  .btn-main,
+  .btn-outline {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 12px;
+    text-align: center;
+  } /* ===================================================== ABOUT SECTION ===================================================== */
+  .about-section .row {
+    gap: 30px;
+  }
+  .about-img-box {
+    padding: 5px;
+    border-radius: 16px;
+  }
+  .about-img-box img {
+    border-radius: 12px;
+  }
+  .about-title {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .about-subtitle {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .about-section p {
+    font-size: 15px;
+    line-height: 1.9;
+    text-align: center;
+  } /* HIGHLIGHTS */
+  .about-highlights {
+    justify-content: center;
+    gap: 12px;
+  }
+  .highlight-item {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+    border-radius: 14px;
+    font-size: 14px;
+  } /* ===================================================== MVM SECTION ===================================================== */
+  .mvm-ultra-section {
+    padding: 70px 15px;
+  }
+  .section-title {
+    font-size: 30px;
+    line-height: 1.4;
+  }
+  .section-subtitle {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .mvm-card {
+    padding: 25px 18px;
+    border-radius: 18px;
+  }
+  .mvm-card h3 {
+    font-size: 22px;
+  }
+  .mvm-card p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .icon {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+  } /* ===================================================== LEADERSHIP SECTION ===================================================== */
+  .leadership-section {
+    padding: 70px 15px;
+  }
+  .leader-img-box {
+    height: auto;
+    min-height: 320px;
+    padding: 15px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+  }
+  .leader-img-box img {
+    max-width: 220px;
+    object-fit: contain;
+  }
+  .leader-title {
+    font-size: 26px;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .leader-name {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  .leadership-section p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.9;
+  } /* REMOVE ANIMATION SHAPES */
+  .mvm-bg {
+    display: none;
+  }
+} /* ========================================================= TABLET RESPONSIVE ========================================================= */
+@media (min-width: 576px) and (max-width: 991px) {
+  section {
+    padding: 70px 20px !important;
+  } /* HERO */
+  .admission-ultra {
+    min-height: 70vh;
+    background-attachment: scroll;
+  }
+  .admission-content h2 {
+    font-size: 38px;
+    line-height: 1.4;
+  }
+  .admission-content p {
+    font-size: 16px;
+  }
+  .admission-actions {
+    flex-direction: column;
+    gap: 14px;
+    max-width: 350px;
+    margin: auto;
+  }
+  .btn-main,
+  .btn-outline {
+    width: 100%;
+  } /* ABOUT */
+  .about-title {
+    font-size: 34px;
+    text-align: center;
+  }
+  .about-subtitle {
+    text-align: center;
+  }
+  .about-section p {
+    text-align: center;
+  }
+  .about-highlights {
+    justify-content: center;
+  } /* MVM */
+  .section-title {
+    font-size: 36px;
+  } /* LEADERSHIP */
+  .leader-img-box {
+    height: auto;
+    min-height: 350px;
+  }
+  .leader-img-box img {
+    max-width: 260px;
+  }
+  .leader-title,
+  .leader-name,
+  .leadership-section p {
+    text-align: center;
+  }
+} /* ========================================================= SMALL LAPTOPS ========================================================= */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .admission-content h2 {
+    font-size: 42px;
+  }
+  .about-title {
+    font-size: 36px;
+  }
+  .section-title {
+    font-size: 38px;
+  }
+  .leader-img-box {
+    height: 380px;
+  }
+} /* ========================================================= LARGE SCREENS ========================================================= */
+@media (min-width: 1600px) {
+  .admission-ultra {
+    height: 90vh;
+  }
+  .admission-content h2 {
+    font-size: 60px;
+  }
+  .about-title {
+    font-size: 48px;
+  }
+  .section-title {
+    font-size: 50px;
+  }
+  .admission-content {
+    max-width: 900px;
+  }
+} 
+/* ========================================================= TOUCH DEVICE OPTIMIZATION ========================================================= */
+@media (hover: none) {
+  .mvm-card:hover,
+  .highlight-item:hover,
+  .about-img-box:hover img {
+    transform: none !important;
+  }
+} 
+/* ========================================================= SAFE OVERFLOW FIX ========================================================= */
+.row,
+.container,
+section {
+  overflow: hidden;
+}
