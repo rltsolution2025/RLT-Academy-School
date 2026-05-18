@@ -137,3 +137,113 @@
     font-size: 30px;
   }
 }
+
+/* ========================================================= MOBILE VIEW ========================================================= */
+@media screen and (max-width: 575px) {
+  /* PAGE */
+  .sports-page {
+    padding-bottom: 50px;
+    overflow: hidden;
+  } /* ================= HEADER ================= */
+  .sports-header {
+    padding: 80px 14px 70px;
+  }
+  .header-glass-card {
+    padding: 28px 18px;
+    border-radius: 18px;
+  }
+  .header-badge {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+  .sports-title {
+    font-size: 30px;
+    line-height: 1.4;
+    margin: 14px 0;
+  }
+  .sports-subtitle {
+    font-size: 14px;
+    line-height: 1.8;
+  } /* ================= SECTION ================= */
+  .sport-section {
+    margin-top: 50px;
+    padding-bottom: 35px;
+  } /* ROW */
+  .sport-section .row {
+    row-gap: 24px;
+  } /* IMAGE */
+  .sport-img-wrapper {
+    border-radius: 18px;
+  }
+  .sport-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 18px;
+  } /* REMOVE GLASS EFFECT */
+  .sport-img-wrapper::before,
+  .sport-img-wrapper::after {
+    display: none;
+  } /* TITLE */
+  .sport-title-sports {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  .sport-title-sports::after {
+    width: 70%;
+    height: 3px;
+  } /* TEXT */
+  .sport-text {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+  } /* CONTENT ALIGNMENT */
+  .sport-section .col-md-6:last-child {
+    text-align: center;
+    padding: 0 10px;
+  } /* REVERSE SECTION FIX */
+  .order-md-1,
+  .order-md-2 {
+    order: unset !important;
+  }
+} /* ========================================================= TABLET VIEW ========================================================= */
+@media (min-width: 576px) and (max-width: 991px) {
+  /* HEADER */
+  .sports-header {
+    padding: 100px 20px 80px;
+  }
+  .sports-title {
+    font-size: 38px;
+  } /* SECTION */
+  .sport-section {
+    margin-top: 60px;
+  }
+  .sport-section .row {
+    row-gap: 30px;
+  } /* IMAGE */
+  .sport-img {
+    height: 320px;
+    object-fit: cover;
+  } /* TITLE */
+  .sport-title-sports {
+    font-size: 34px;
+  } /* TEXT */
+  .sport-text {
+    font-size: 15px;
+    line-height: 1.8;
+  } /* ALIGNMENT */
+  .sport-section .col-md-6:last-child {
+    text-align: center;
+  }
+  .sport-title-sports::after {
+    margin: auto;
+    left: 0;
+    right: 0;
+  } /* REMOVE ORDER */
+  .order-md-1,
+  .order-md-2 {
+    order: unset !important;
+  }
+}

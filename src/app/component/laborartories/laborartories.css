@@ -200,3 +200,174 @@
     font-size: 28px;
   }
 }
+
+/* =========================================================
+   MOBILE VIEW
+========================================================= */
+
+@media screen and (max-width: 575px) {
+  /* HERO SECTION */
+
+  .admission-alt {
+    padding: 50px 0;
+  }
+
+  .admission-wrap {
+    display: block;
+  }
+
+  /* LEFT CONTENT */
+
+  .admission-left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 14px;
+  }
+
+  /* TAG */
+
+  .admission-tag {
+    font-size: 11px;
+    padding: 7px 16px;
+    border-radius: 30px;
+    margin-bottom: 14px;
+  }
+
+  /* TITLE */
+
+  .admission-heading {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+  }
+
+  /* TEXT */
+
+  .admission-lead {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  /* BUTTONS */
+
+  .admission-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* IMAGE */
+
+  .admission-right {
+    width: 100%;
+  }
+
+  .admission-right img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    display: block;
+  }
+
+  /* LAB SECTION */
+
+  .labs-alt {
+    padding: 55px 0;
+  }
+
+  /* INTRO */
+
+  .labs-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 14px;
+  }
+
+  .labs-intro h2 {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+  }
+
+  .labs-intro p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* LAB ROW */
+
+  .lab-row,
+  .lab-row.reverse {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    direction: ltr;
+  }
+
+  /* IMAGE */
+
+  .lab-img {
+    width: 100%;
+  }
+
+  .lab-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    display: block;
+  }
+
+  /* TEXT */
+
+  .lab-text {
+    width: 100%;
+    padding: 0 14px;
+  }
+
+  .lab-text h3 {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+  }
+
+  .lab-text h3::after {
+    margin: 8px auto 0;
+  }
+
+  .lab-text p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+
+  /* LIST */
+
+  .lab-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .lab-text li {
+    background: #f7faff;
+    padding: 12px 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}

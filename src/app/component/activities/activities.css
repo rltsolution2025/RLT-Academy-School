@@ -191,3 +191,123 @@
     text-align: left;
   }
 }
+
+/* ========================================================= MOBILE VIEW ========================================================= */
+@media screen and (max-width: 575px) {
+  /* ================= HEADER ================= */
+  .events-header {
+    padding: 80px 14px 70px;
+    overflow: hidden;
+  } /* GLASS CARD */
+  .header-glass-card {
+    padding: 30px 18px;
+    border-radius: 18px;
+    backdrop-filter: blur(18px);
+  } /* BADGE */
+  .header-badge {
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 30px;
+  } /* TITLE */
+  .events-title {
+    font-size: 30px;
+    line-height: 1.4;
+    margin: 14px 0;
+  } /* SUBTITLE */
+  .events-subtitle {
+    font-size: 14px;
+    line-height: 1.8;
+  } /* REMOVE LARGE BLOBS */
+  .events-header::before,
+  .events-header::after {
+    display: none;
+  } /* ================= SECTION ================= */
+  .sports-section {
+    padding: 50px 0;
+    overflow: hidden;
+  } /* ROW */
+  .sports-section .row {
+    row-gap: 28px;
+  } /* TEXT COLUMN */
+  .sports-section .col-lg-6:last-child,
+  .sports-section .col-lg-6:first-child {
+    text-align: center;
+    padding: 0 14px;
+  } /* HEADING */
+  .section-heading {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  } /* TEXT */
+  .section-text {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  } /* LIST */
+  .sports-list {
+    margin-top: 18px;
+    text-align: left;
+    padding: 0;
+    list-style: none;
+  }
+  .sports-list li {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    padding: 12px 14px 12px 36px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  }
+  .sports-list li::before {
+    left: 14px;
+    top: 12px;
+  } /* IMAGE WRAPPER */
+  .image-wrapper {
+    padding: 8px;
+    border-radius: 18px;
+  } /* IMAGE */
+  .image-wrapper img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+  }
+} /* ========================================================= TABLET VIEW ========================================================= */
+@media (min-width: 576px) and (max-width: 991px) {
+  /* HEADER */
+  .events-header {
+    padding: 100px 20px 80px;
+  }
+  .events-title {
+    font-size: 38px;
+  }
+  .events-subtitle {
+    font-size: 15px;
+  } /* GLASS CARD */
+  .header-glass-card {
+    padding: 40px 24px;
+  } /* SPORTS SECTION */
+  .sports-section {
+    padding: 60px 0;
+  }
+  .sports-section .row {
+    row-gap: 30px;
+  } /* TEXT */
+  .section-heading {
+    font-size: 32px;
+    text-align: center;
+  }
+  .section-text {
+    text-align: center;
+  } /* LIST */
+  .sports-list {
+    text-align: left;
+  } /* IMAGE */
+  .image-wrapper img {
+    height: 320px;
+    object-fit: cover;
+  }
+}

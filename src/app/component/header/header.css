@@ -444,6 +444,9 @@
   }
 
   /* ========================================================= MOBILE LOGIN BUTTON ========================================================= */
+  .mobile-login-wrapper {
+    margin-top: 0;
+  }
   .mobile-login-btn {
     width: 100%;
     display: flex;
